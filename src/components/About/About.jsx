@@ -48,9 +48,6 @@ function About() {
                 loading="lazy"
               />
             </picture>
-            <figcaption className={styles.photoCaption}>
-              Ход строительства мечети «Шамиль»
-            </figcaption>
           </figure>
         </Reveal>
 

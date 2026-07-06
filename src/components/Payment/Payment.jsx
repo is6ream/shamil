@@ -1,10 +1,6 @@
-import { QRCodeSVG } from 'qrcode.react'
-import { FiArrowUpRight } from 'react-icons/fi'
 import Reveal from '../Reveal/Reveal'
+import qrCode from './assets/qr-code.jpg'
 import styles from './Payment.module.css'
-
-// TODO: заменить на реальную ссылку на страницу оплаты/сбора перед публикацией
-const PAYMENT_URL = 'https://pay.example.com/mechet-shamil'
 
 function Payment() {
   return (
@@ -15,9 +11,8 @@ function Payment() {
           <span className={styles.tagLight}>Оплата</span>
           <h2 className={styles.title}>Сделайте пожертвование сегодня</h2>
           <p className={styles.subtitle}>
-            Отсканируйте QR-код камерой телефона или нажмите на кнопку ниже, чтобы
-            перейти на страницу оплаты. Любая сумма приближает нас к завершению
-            строительства.
+            Отсканируйте QR-код камерой телефона, чтобы перейти на страницу
+            оплаты. Любая сумма приближает нас к завершению строительства.
           </p>
           <p className={styles.blessing}>
             Джазакуму-Ллаху хайран — да воздаст вам Аллах благом за вашу помощь
@@ -27,25 +22,13 @@ function Payment() {
         <Reveal delay={0.15} className={styles.cardCol}>
           <div className={styles.card}>
             <div className={styles.qrWrap}>
-              <QRCodeSVG
-                value={PAYMENT_URL}
-                size={220}
-                bgColor="#ffffff"
-                fgColor="#0b0c2a"
-                level="M"
-                marginSize={2}
-                title="QR-код для перехода к оплате пожертвования"
+              <img
+                src={qrCode}
+                alt="QR-код для перехода к оплате пожертвования"
+                width="220"
+                height="220"
               />
             </div>
-            <a
-              href={PAYMENT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.payButton}
-            >
-              Перейти к оплате
-              <FiArrowUpRight size={20} />
-            </a>
           </div>
         </Reveal>
       </div>
