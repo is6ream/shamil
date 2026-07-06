@@ -1,0 +1,47 @@
+.footer {
+  background: var(--color-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 48px 0 32px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+
+.brand em {
+  font-style: normal;
+  color: var(--color-accent);
+}
+
+.logoMark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, var(--color-primary), var(--color-accent));
+  flex-shrink: 0;
+}
+
+.blessing {
+  max-width: 560px;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+}

@@ -1,0 +1,71 @@
+.section {
+  background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+  counter-reset: step;
+}
+
+.stepWrap {
+  height: 100%;
+}
+
+.step {
+  position: relative;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 40px 28px 32px;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.stepNumber {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px -6px rgba(28, 44, 189, 0.6);
+}
+
+.stepIcon {
+  width: 64px;
+  height: 64px;
+  margin: 12px auto 22px;
+  border-radius: 18px;
+  background: rgba(159, 210, 253, 0.3);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.stepText {
+  color: var(--color-muted);
+  font-size: 0.96rem;
+}
+
+@media (max-width: 860px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}

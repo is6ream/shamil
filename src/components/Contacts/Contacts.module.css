@@ -1,0 +1,100 @@
+.section {
+  background: var(--color-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  margin-top: 48px;
+  align-items: stretch;
+}
+
+.infoCard {
+  height: 100%;
+  background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-primary-dark) 100%);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  color: var(--color-white);
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(159, 210, 253, 0.16);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoLabel {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.infoValue {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.requisitesCard {
+  height: 100%;
+  background: var(--color-white);
+  border: 1px solid rgba(28, 44, 189, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-card);
+}
+
+.requisitesTitle {
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+}
+
+.requisitesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+}
+
+.requisitesItem dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+.requisitesItem dd {
+  font-weight: 700;
+  font-size: 0.98rem;
+  word-break: break-word;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .requisitesList {
+    grid-template-columns: 1fr;
+  }
+}
